@@ -1,0 +1,151 @@
+.mobile-sidebar{
+    display: none;
+}
+#sidebar{
+    display: flex;
+    height: 100vh;
+    width: 10rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: var(--clr-lightred);
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: var(--size-2xl);
+}
+
+.sidebar-list
+{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+    padding: 0;
+    gap:3rem;
+    list-style: none;
+}
+
+.sidebar-list>li>a:hover{
+    color: var(--clr-background);
+}
+
+
+main{
+    margin-left: 10rem;
+}
+
+
+@media  (min-width:160rem) {
+    main{
+        margin-left: 20rem;
+    }
+
+    #sidebar{
+        width: 20rem;
+        font-size: var(--size-6xl);
+
+    }
+}
+
+@media (max-width:160rem) and (min-width:142.5rem) {
+    main{
+        margin-left: 18rem;
+    }
+
+    #sidebar{
+        width: 18rem;
+        font-size: var(--size-6xl);
+
+    }
+}
+
+
+@media (max-width:142.5rem) and (min-width:125rem) {
+    main{
+        margin-left: 16rem;
+    }
+
+    #sidebar{
+        width: 16rem;
+        font-size: var(--size-5xl);
+
+    }
+}
+
+@media (max-width:125rem) and (min-width:107.5rem) {
+    main{
+        margin-left: 14rem;
+    }
+
+    #sidebar{
+        width: 14rem;
+        font-size: var(--size-4xl);
+
+    }
+}
+
+@media (max-width: 107.5rem) and (min-width: 90rem) {
+    main{
+        margin-left: 12rem;
+    }
+
+    #sidebar{
+        width: 12rem;
+        font-size: var(--size-3xl);
+
+    }
+
+}
+
+
+@media(max-width:70.5rem)
+{
+   #sidebar{
+    width: 8.5rem;
+    font-size: var(--size-xl);
+
+
+   }
+   main{
+    margin-left: 8.5rem;
+   }
+}
+
+@media(max-width:56rem)
+{
+    #sidebar{
+        left: -100vw;
+        width: 100vw;
+        transition: left 0.3s ease;
+        z-index: 99;
+        font-size:var(--size-4xl)
+    }
+
+    #sidebar.active{
+        left: 0;
+    }
+       main{
+        margin-left: 0;
+    }
+    .mobile-sidebar{
+        display: inline-block;
+        position:fixed;
+        margin-top: 1.1rem;
+        margin-left: 0.7rem;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .hamburger-menu {
+        stroke: white; 
+      }
+}
+
+
+@media(max-width:48rem)
+{
+   #sidebar{
+    font-size: var(--size-3xl);
+   }
+}
